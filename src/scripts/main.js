@@ -2,7 +2,7 @@
 
 const list = document.querySelector('ul');
 const getSalary = (item) => {
-  const rawSalary = item.dataset.salary;
+  const rawSalary = item.dataset.salary || '';
   const cleanSalary = rawSalary.replace(/\D/g, '');
 
   return Number(cleanSalary) || 0;
